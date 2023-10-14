@@ -1,3 +1,5 @@
+// let myVar : type = value;
+
 let str : string = "It's first string";
 str = "It's another string";
 /* 
