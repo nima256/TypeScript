@@ -9,7 +9,7 @@ and if you hover you see that it tells you your variable type is string you are 
 but js doesn't told you this until u run it
 even you can not set it to boolean
 str = true;
-*/
+*/ 
 
 let num : number = 12;
 num = 45;
