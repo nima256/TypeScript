@@ -26,3 +26,13 @@ function circle(num: number) {
 
 // now if i pass number it will work
 circle(5);
+
+
+/* Here an arrow function and also we can add more that on input for a function with adding comma 
+   after type of that input */
+const ARROWFUNC = (name: string, age: number, isOld: boolean) => {
+        console.log(name, age, isOld);
+};
+
+// here we call it and enter the input and if we add more input or less input it would get us error
+ARROWFUNC("hey", 45, true);
