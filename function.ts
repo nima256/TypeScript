@@ -31,7 +31,7 @@ circle(5);
 /* Here an arrow function and also we can add more that on input for a function with adding comma 
    after type of that input */
 const ARROWFUNC = (name: string, age: number, isOld: boolean) => {
-        console.log(name, age, isOld);
+        return [name, age, isOld];
 };
 
 // here we call it and enter the input and if we add more input or less input it would get us error
@@ -40,7 +40,7 @@ ARROWFUNC("hey", 45, true);
 
 // We add a default value for the function that if user doesn't enter input the function has a default value
 function greet(name: string = "Unknown") {
-        console.log(`Hi , ${name}`);
+        return `Hi , ${name}`;
 };
 
 
@@ -49,7 +49,7 @@ function greet(name: string = "Unknown") {
    that it returns a number function will get that the output is number but in large function 
    if you say the return must be string and in that you make a mistake and return a number 
    it would tell you that the return value is number not string */
-function greet2(name: string = "Unknown") : string {
+function greet2(name: string = "Unknown"): string {
         return `Hi Dear ${name}`;
 };
 
@@ -62,3 +62,19 @@ function randomNumber(num: number) {
         return num;
 };
 
+
+/* Here if we have a list of numbers and we want to map over them we have to write a function 
+   and we don't need to specify the type of the input funciton TypeScript is smart and can undrestand
+   that the list of number are numbers and the output should be number so it knows it */
+const numbers = [5, 4, 8];
+numbers.map(num => {
+        return num.toString();
+})
+
+
+// The void type is nothing and if the function is going to return anything you can add void to type
+// If you don't return anything the default type is void
+function returnNothing(age: number): void {
+        console.log(age);
+        console.log(age)
+};
