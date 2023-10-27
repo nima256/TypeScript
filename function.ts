@@ -36,3 +36,29 @@ const ARROWFUNC = (name: string, age: number, isOld: boolean) => {
 
 // here we call it and enter the input and if we add more input or less input it would get us error
 ARROWFUNC("hey", 45, true);
+
+
+// We add a default value for the function that if user doesn't enter input the function has a default value
+function greet(name: string = "Unknown") {
+        console.log(`Hi , ${name}`);
+};
+
+
+/* Here in function we can add a type for the return value of the function we can add it if we want
+   it is not useful in short function and TypeScript is smart if you write sth in your function 
+   that it returns a number function will get that the output is number but in large function 
+   if you say the return must be string and in that you make a mistake and return a number 
+   it would tell you that the return value is number not string */
+function greet2(name: string = "Unknown") : string {
+        return `Hi Dear ${name}`;
+};
+
+/* Here another example that if you hover on the name of the fucntion you see that TypeScript says
+   the output is string or number */
+function randomNumber(num: number) {
+        if (Math.random() > 0.5) {
+                return num.toString();
+        }
+        return num;
+};
+
