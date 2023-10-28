@@ -6,3 +6,10 @@ function printname(name: { first: string, last: string }): void {
    and in front of it we type the value that we want and we add comma and enter rest of the keys */
 printname({ first: "Nick", last: "djasklf" });
 
+// We can also have object in variables
+let nums: { x: number, y: number } = { x: 45, y: 74 };
+
+// We can also have it as output of a function 
+function randomNum(): { x: number, y: number } {
+    return { x: Math.random(), y: Math.random() };
+};
