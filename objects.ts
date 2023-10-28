@@ -13,3 +13,50 @@ let nums: { x: number, y: number } = { x: 45, y: 74 };
 function randomNum(): { x: number, y: number } {
     return { x: Math.random(), y: Math.random() };
 };
+
+/* at above i used "x : number , y : number" for two times maybe i want to use it morre and it 
+   would be a lot of code in line so we can write Type Alias */
+
+type numForAll = {
+    x: number,
+    y: number
+};
+
+// now here insted of that i can type the name of the Type Alias above
+let nums2: numForAll = { x: 45, y: 74 };
+
+// same thing for here 
+function randomNum2(): numForAll {
+    return { x: Math.random(), y: Math.random() };
+};
+
+
+// Here example nasted objects and also Alias 
+type songObject = {
+    title: string,
+    artist: string,
+    numStreams: number,
+    credits: { producer: string, writer: string }
+};
+
+function calculatePayout(song: songObject): number {
+    return song.numStreams * 0.0045
+};
+
+function printSong(song: songObject) {
+    console.log(`${song.title} - ${song.artist}`);
+}
+
+const data: songObject = {
+    title: "Unchained Melody",
+    artist: "Righteous Brothers",
+    numStreams: 648689697,
+    credits: {
+        producer: "Phil Spector",
+        writer: "Alex North"
+    }
+};
+
+const output = calculatePayout(data);
+console.log(output);
+printSong(data);
