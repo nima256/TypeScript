@@ -75,15 +75,36 @@ const myPoint: Point = { x: 2, y: 4 }
 // readonly in objects
 
 type User = {
-    readonly id : number,
-    username : string
+    readonly id: number,
+    username: string
 }
 
-const user : User = {
-    id : 4444,
-    username : "jdasl;kf"
+const user: User = {
+    id: 4444,
+    username: "jdasl;kf"
 };
 
 console.log(user.id);
 // we can't do this
 // user.id = 45566
+
+// we can combine two type
+
+type cat = {
+    numLives: number
+}
+
+type dog = {
+    breed: string
+}
+
+// we can combined them and then add them sth more 
+type catDog = cat & dog & {
+    age: number
+}
+
+const me: catDog = {
+    numLives: 4,
+    breed: "djaskdf",
+    age: 44
+};
