@@ -60,3 +60,30 @@ const data: songObject = {
 const output = calculatePayout(data);
 console.log(output);
 printSong(data);
+
+
+// How to make a type optional in Type Alias
+
+type Point = {
+    x: number,
+    y: number,
+    z?: number
+}
+
+const myPoint: Point = { x: 2, y: 4 }
+
+// readonly in objects
+
+type User = {
+    readonly id : number,
+    username : string
+}
+
+const user : User = {
+    id : 4444,
+    username : "jdasl;kf"
+};
+
+console.log(user.id);
+// we can't do this
+// user.id = 45566
